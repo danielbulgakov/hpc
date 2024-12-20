@@ -17,6 +17,7 @@ generateMatrix(int size, unsigned int seed)
     }
     return res;
 }
+
 dvec
 generateVector(int size, unsigned int seed)
 {
