@@ -1,9 +1,7 @@
 // Copyright 2024 Bulgakov Daniil
 
-
 #ifndef SRC_SLAU_GRADIENT_HH_
 #define SRC_SLAU_GRADIENT_HH_
-
 
 #include <algorithm>
 #include <cmath>
