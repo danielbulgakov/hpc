@@ -89,7 +89,6 @@ omp_vec_vec(const dvec &a, const dvec &b)
 
 //----------------------------- Conjugate Method Algorithm --------------------
 
-
 dvec
 solve(const dmat &a, const dvec &b)
 {

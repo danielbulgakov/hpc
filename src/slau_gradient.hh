@@ -39,7 +39,6 @@ generateMatrix(int size, unsigned int seed);
 dvec
 generateVector(int size, unsigned int seed);
 
-
 //----------------------------- Sequential Computing Methods ------------------
 
 /**
