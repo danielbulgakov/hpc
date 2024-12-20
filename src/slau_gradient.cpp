@@ -1,6 +1,6 @@
 // Copyright 2024 Bulgakov Daniil
 
-#include "slau_gradient.h"
+#include "slau_gradient.hh"
 
 //----------------------------- Test Data Generation --------------------------
 
