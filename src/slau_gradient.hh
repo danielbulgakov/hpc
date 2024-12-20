@@ -15,29 +15,7 @@ const double SMOL = 1.0e-10;
 using dvec = std::vector<double>;
 using dmat = std::vector<dvec>;
 
-//----------------------------- Test Data Generation --------------------------
-
-/**
- * @brief generate random simmetric positive defined (spd) matrix
- *
- * @param size size of matrix
- * @param seed seed
- * @return matrix (dmat, std::vector<std::vector<double>>)
- */
-dmat
-generateMatrix(int size, unsigned int seed);
-
-/**
- * @brief generate random vector
- *
- * @param size vector size
- * @param seed seed
- * @return vector
- */
-dvec
-generateVector(int size, unsigned int seed);
-
-//----------------------------- Sequential Computing Methods ------------------
+// Sequential Computing Methods
 
 /**
  * @brief scalar multiplication of vectors
@@ -80,7 +58,7 @@ vec_vec_comb(double ma, const dvec &a, double mb, const dvec &b);
 double
 vec_norm(const dvec &a);
 
-//----------------------------- Parallel Computing Methods --------------------
+// Parallel Computing Methods
 
 /**
  * @brief parallel matrix-vector multiplication
@@ -102,17 +80,7 @@ omp_matrix_vec(const dmat &a, const dvec &b);
 double
 omp_vec_vec(const dvec &a, const dvec &b);
 
-//----------------------------- Conjugate Method Algorithm --------------------
-
-/**
- * @brief conjugate gradient method solver
- *
- * @param a matrix (dmat, std::vector<std::vector<double>>)
- * @param b vector
- * @return result
- */
-dvec
-solve(const dmat &a, const dvec &b);
+// Conjugate Method Algorithm
 
 /**
  * @brief parallel conjugate gradient method solver

@@ -1,0 +1,42 @@
+Collection status has changed. 1
+Collection has been started.
+Collection has stopped. Application exit code:  0
+Finalizing results
+Finalizing the result
+Clearing the database
+The database has been cleared, elapsed time is 0.408 seconds.
+Loading raw data to the database
+Loading 'systemcollector-12400-d.bulgakov.sc' file
+Loading '12400-12412.0.trace' file
+Updating precomputed scalar metrics
+Raw data has been loaded to the database, elapsed time is 0.102 seconds.
+Processing profile metrics and debug information
+Data transformations have been finished, elapsed time is 0.005 seconds.
+Setting data model parameters
+Resolving module symbols
+Resolving information for `src_no_omp'
+Resolving information for `libc.so.6'
+Resolving bottom user stack information
+Resolving thread name information
+Resolving call target names for dynamic code
+Symbol resolution has been finished, elapsed time is 1.159 seconds.
+Processing profile metrics and debug information
+Deferred data transformations have been finished, elapsed time is 0.005 seconds.
+Setting data model parameters
+Data model parameters have been set, elapsed time is 0.014 seconds.
+Precomputing frequently used data
+Precomputing frequently used data
+Updating precomputed scalar metrics
+Precomputing frequently used data has been finished, elapsed time is 0.038 seconds.
+Discarding redundant overtime data
+Saving the result
+Redundant overtime data has been discarded, elapsed time is 0.001 seconds.
+Raw collector data has been discarded, elapsed time is 0.000 seconds.
+Finalizing the result took 1.780 seconds.
+Preparing data for display of survey call tree
+Resolving module symbols
+Resolving information for dangling locations
+Resolving bottom user stack information
+Resolving thread name information
+Resolving call target names for dynamic code
+Precomputing frequently used data

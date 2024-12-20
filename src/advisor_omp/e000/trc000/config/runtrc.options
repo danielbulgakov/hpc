@@ -1,0 +1,12 @@
+-r
+/home/dbulgakov/Study/hpc/src/advisor_omp/e000/trc000
+--return-app-exitcode
+--cs-mode=count-loops,count-flops,stl-profiling,stack-stitching
+--count-flops
+--cs-file=/home/dbulgakov/Study/hpc/src/advisor_omp/e000/callstacks.def
+--jit-profiling
+--benchmarks=dram,mcdram,cpu_cache,flop_peak,int,
+--target-gpu=none
+--app-working-dir=/home/dbulgakov/Study/hpc/src/build
+--
+/home/dbulgakov/Study/hpc/src/build/src_omp

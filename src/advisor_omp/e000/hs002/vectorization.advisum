@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="/usr/include/c++/13/bits/stl_numeric.h"
+           line_no="198"
+           routine="std::inner_product&lt;__gnu_cxx::__normal_iterator&lt;double const*, std::vector&lt;double, std::allocator&lt;double&gt;&gt;&gt;, __gnu_cxx::__normal_iterator&lt;double const*, std::vector&lt;double, std::allocator&lt;double&gt;&gt;&gt;, double&gt;"
+           is_vectorized="0"
+           self_time="8.599540E+00"
+           total_time="1.929442E+01"
+           trip_counts="1001"
+           func_instance="11"
+           priority="0"/>
+  <hotspot filename="/home/dbulgakov/hpc/src/slau_gradient.cpp"
+           line_no="75"
+           routine="omp_matrix_vec._omp_fn.0"
+           is_vectorized="0"
+           self_time="3.000464E-02"
+           total_time="1.936443E+01"
+           trip_counts="83"
+           func_instance="17"
+           priority="0"/>
+  <hotspot filename="/home/dbulgakov/hpc/src/slau_gradient.cpp"
+           line_no="86"
+           routine="omp_vec_vec._omp_fn.0"
+           is_vectorized="0"
+           self_time="2.000223E-02"
+           total_time="2.000223E-02"
+           trip_counts="83"
+           func_instance="31"
+           priority="0"/>
+  <hotspot filename="/home/dbulgakov/hpc/src/slau_gradient.cpp"
+           line_no="45"
+           routine="matrix_vec"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="1.000000E-02"
+           trip_counts="1001"
+           func_instance="8"
+           priority="0"/>
+  <hotspot filename="/home/dbulgakov/hpc/src/slau_gradient.cpp"
+           line_no="128"
+           routine="omp_solve"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="6.906000E+01"
+           trip_counts="1000"
+           func_instance="13"
+           priority="0"/>
+</IntelParallelAdvisorSummary >

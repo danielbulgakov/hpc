@@ -1,0 +1,10 @@
+
+=== Start: [2024/12/21 00:43:30] === 
+Peak bandwidth measurement started...
+Peak bandwidth measurement finished.
+Analysis started...
+Result file: /home/dbulgakov/Study/hpc/src/advisor_no_omp/e000/trc000/trc000.advixe 
+Application exit code: 0 
+Result file: /home/dbulgakov/Study/hpc/src/advisor_no_omp/e000/trc000/trc000.advixe 
+Analysis completed
+=== End: [2024/12/21 00:55:35] === 

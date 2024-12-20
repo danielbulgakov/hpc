@@ -1,0 +1,9 @@
+-r
+/home/dbulgakov/Study/hpc/src/advisor_no_omp/e000/mp000
+--tool=map
+--record-stack-frame
+--sample-size=300000
+--record-mem-allocations
+--app-working-dir=/home/dbulgakov/Study/hpc/src/build
+--
+/home/dbulgakov/Study/hpc/src/build/src_no_omp

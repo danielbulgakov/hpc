@@ -1,0 +1,23 @@
+Analysis started...
+Collection has been started.
+Result file: /home/dbulgakov/Study/hpc/src/advisor_no_omp/e000/mp000/mp000.advixe 
+Found target process /home/dbulgakov/Study/hpc/src/build/src_no_omp (PID = 15226). Analysis started... 
+Loaded module: /home/dbulgakov/Study/hpc/src/build/src_no_omp. 
+Loaded module: /lib64/ld-linux-x86-64.so.2. 
+Loaded module: [vdso]. 
+Loaded module: /lib/x86_64-linux-gnu/libstdc++.so.6. 
+Loaded module: /lib/x86_64-linux-gnu/libm.so.6. 
+Loaded module: /lib/x86_64-linux-gnu/libgcc_s.so.1. 
+Loaded module: /lib/x86_64-linux-gnu/libc.so.6. 
+Unloaded module: /home/dbulgakov/Study/hpc/src/build/src_no_omp. 
+Unloaded module: /lib64/ld-linux-x86-64.so.2. 
+Unloaded module: [vdso]. 
+Unloaded module: /lib/x86_64-linux-gnu/libstdc++.so.6. 
+Unloaded module: /lib/x86_64-linux-gnu/libm.so.6. 
+Unloaded module: /lib/x86_64-linux-gnu/libgcc_s.so.1. 
+Unloaded module: /lib/x86_64-linux-gnu/libc.so.6. 
+Process /home/dbulgakov/Study/hpc/src/build/src_no_omp (PID = 15226) has terminated. 
+Warning: No SITE annotations were encountered, so no stride/alignment data can be reported. 
+Application exit code: 0 
+Result file: /home/dbulgakov/Study/hpc/src/advisor_no_omp/e000/mp000/mp000.advixe 
+Analysis completed

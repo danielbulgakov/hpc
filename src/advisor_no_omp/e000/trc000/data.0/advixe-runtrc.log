@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log version="1.0" tool="runtool">
+
+<msg id="1" tool="runtool">
+  <type>log-start</type>
+  <arg>2024/12/21 00:43:30</arg>
+</msg>
+<msg id="2" tool="runtool">
+  <type>bandwidth-measurement-starts</type>
+</msg>
+<msg id="3" tool="runtool">
+  <type>bandwidth-measurement-done</type>
+</msg>
+<msg id="4" tool="runtool">
+  <type>collector-starts</type>
+</msg>
+<msg id="5" tool="runtool">
+  <type>marker-file</type>
+  <arg>/home/dbulgakov/Study/hpc/src/advisor_no_omp/e000/trc000/trc000.advixe</arg>
+</msg>
+<msg id="6" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/home/dbulgakov/Study/hpc/src/build/src_no_omp</arg>
+  <arg>12625</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:43:39 2024</timestamp>
+</msg>
+<msg id="7" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:43:39 2024</timestamp>
+</msg>
+<msg id="8" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/home/dbulgakov/Study/hpc/src/build/src_no_omp</arg>
+  <arg>0x57ff6ca50000</arg>
+  <arg>0x57ff6ca5901f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:43:39 2024</timestamp>
+</msg>
+<msg id="9" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7788dd2c7000</arg>
+  <arg>0x7788dd3002d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:43:39 2024</timestamp>
+</msg>
+<msg id="10" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffe7e848000</arg>
+  <arg>0x7ffe7e8490aa</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:43:39 2024</timestamp>
+</msg>
+<msg id="11" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <arg>0x7788c8200000</arg>
+  <arg>0x7788c847d13f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:43:40 2024</timestamp>
+</msg>
+<msg id="12" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <arg>0x7788c80eb000</arg>
+  <arg>0x7788c81d3017</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:43:40 2024</timestamp>
+</msg>
+<msg id="13" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <arg>0x7788c80bd000</arg>
+  <arg>0x7788c80ea3a7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:43:40 2024</timestamp>
+</msg>
+<msg id="14" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7788c7e00000</arg>
+  <arg>0x7788c8011d8f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:43:40 2024</timestamp>
+</msg>
+<msg id="15" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/home/dbulgakov/Study/hpc/src/build/src_no_omp</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:55:31 2024</timestamp>
+</msg>
+<msg id="16" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:55:31 2024</timestamp>
+</msg>
+<msg id="17" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:55:31 2024</timestamp>
+</msg>
+<msg id="18" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:55:31 2024</timestamp>
+</msg>
+<msg id="19" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:55:31 2024</timestamp>
+</msg>
+<msg id="20" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:55:31 2024</timestamp>
+</msg>
+<msg id="21" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:55:31 2024</timestamp>
+</msg>
+<msg id="22" tool="trc">
+  <type>PROCESS_FINISH</type>
+  <arg>/home/dbulgakov/Study/hpc/src/build/src_no_omp</arg>
+  <arg>12625</arg>
+  <arg>0x0</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Dec 21 00:55:31 2024</timestamp>
+</msg>
+<msg id="23" tool="runtool">
+  <type>app-exit-code</type>
+  <arg>0</arg>
+</msg>
+<msg id="24" tool="runtool">
+  <type>marker-file</type>
+  <arg>/home/dbulgakov/Study/hpc/src/advisor_no_omp/e000/trc000/trc000.advixe</arg>
+</msg>
+<msg id="25" tool="runtool">
+  <type>collector-done</type>
+</msg>
+<msg id="26" tool="runtool">
+  <type>log-end</type>
+  <arg>2024/12/21 00:55:35</arg>
+</msg>
+
+</log>
+

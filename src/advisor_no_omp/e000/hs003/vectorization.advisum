@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="/usr/include/c++/13/bits/stl_numeric.h"
+           line_no="198"
+           routine="std::inner_product&lt;__gnu_cxx::__normal_iterator&lt;double const*, std::vector&lt;double, std::allocator&lt;double&gt;&gt;&gt;, __gnu_cxx::__normal_iterator&lt;double const*, std::vector&lt;double, std::allocator&lt;double&gt;&gt;&gt;, double&gt;"
+           is_vectorized="0"
+           self_time="1.105108E+01"
+           total_time="2.558016E+01"
+           trip_counts="1001"
+           func_instance="9"
+           priority="0"/>
+  <hotspot filename="/home/dbulgakov/hpc/src/slau_gradient.cpp"
+           line_no="55"
+           routine="vec_vec_comb"
+           is_vectorized="0"
+           self_time="2.999013E-02"
+           total_time="4.980854E-02"
+           trip_counts="1001"
+           func_instance="19"
+           priority="0"/>
+  <hotspot filename="/usr/include/c++/13/bits/stl_algobase.h"
+           line_no="930"
+           routine="std::__fill_a1&lt;double*, double&gt;"
+           is_vectorized="0"
+           self_time="2.000035E-02"
+           total_time="2.000035E-02"
+           trip_counts="1000"
+           func_instance="37"
+           priority="0"/>
+  <hotspot filename="/home/dbulgakov/hpc/src/slau_gradient.cpp"
+           line_no="13"
+           routine="generateMatrix"
+           is_vectorized="0"
+           self_time="1.001802E-02"
+           total_time="1.001802E-02"
+           trip_counts="1001"
+           func_instance="3"
+           priority="0"/>
+  <hotspot filename="/home/dbulgakov/hpc/src/slau_gradient.cpp"
+           line_no="45"
+           routine="matrix_vec"
+           is_vectorized="0"
+           self_time="1.000404E-02"
+           total_time="1.274018E+01"
+           trip_counts="1001"
+           func_instance="6"
+           priority="0"/>
+</IntelParallelAdvisorSummary >

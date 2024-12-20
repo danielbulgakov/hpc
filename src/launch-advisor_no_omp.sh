@@ -1,0 +1,2 @@
+#!/bin/bash
+source "/home/dbulgakov/intel/oneapi/advisor/latest/env/vars.sh" && advixe-cl --create-project --project-dir "/home/dbulgakov/Study/hpc/src/advisor_no_omp" -- "/home/dbulgakov/Study/hpc/src/build/src_no_omp" && advisor-gui "/home/dbulgakov/Study/hpc/src/advisor_no_omp/e000"

@@ -2,35 +2,7 @@
 
 #include "slau_gradient.hh"
 
-//----------------------------- Test Data Generation --------------------------
-
-dmat
-generateMatrix(int size, unsigned int seed)
-{
-    dmat res = dmat(size, std::vector<double>(size));
-    dvec v = generateVector(size, seed);
-    for (int i = 0; i < size; ++i) {
-        for (int j = 0; j < size; ++j) {
-            res[i][j] = v[i] * v[j];
-        }
-        res[i][i] += size;
-    }
-    return res;
-}
-
-dvec
-generateVector(int size, unsigned int seed)
-{
-    dvec res = dvec(size);
-    std::mt19937 mt(seed);
-    std::uniform_real_distribution<double> urd(-5, 5);
-    for (int i = 0; i < size; i++) {
-        res[i] = urd(mt);
-    }
-    return res;
-}
-
-//----------------------------- Sequential Computing Methods ------------------
+// Sequential Computing Methods ------------------
 
 double
 vec_vec(const dvec &a, const dvec &b)
@@ -64,7 +36,7 @@ vec_norm(const dvec &a)
     return sqrt(vec_vec(a, a));
 }
 
-//----------------------------- Parallel Computing Methods --------------------
+// Parallel Computing Methods
 
 dvec
 omp_matrix_vec(const dmat &a, const dvec &b)
@@ -88,34 +60,7 @@ omp_vec_vec(const dvec &a, const dvec &b)
     return res;
 }
 
-//----------------------------- Conjugate Method Algorithm --------------------
-
-dvec
-solve(const dmat &a, const dvec &b)
-{
-    dvec res(a.size(), 0.0);
-
-    dvec r(b);
-    dvec p(r);
-
-    for (int i = 0; i < a.size(); i++) {
-        dvec r_prev;
-        dvec mv = matrix_vec(a, p);
-        r_prev = r;
-
-        double d = vec_vec(r, r) / std::max(vec_vec(p, mv), SMOL);
-        res = vec_vec_comb(1.0, res, d, p);
-        r = vec_vec_comb(1.0, r, -d, mv);
-
-        if (vec_norm(r) < SMOL)
-            break;
-
-        double s = vec_vec(r, r) / std::max(vec_vec(r_prev, r_prev), SMOL);
-        p = vec_vec_comb(1.0, r, s, p);
-    }
-
-    return res;
-}
+// Conjugate Method Algorithm
 
 dvec
 omp_solve(const dmat &a, const dvec &b)

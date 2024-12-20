@@ -1,0 +1,605 @@
+# callstacks file version: 8
+#    rowid	    parent	       rva	 loop	 system	                                function	binary	instance_start_rva	instance_size	instance_end_rva	finst_rowid	roi	is_inlined	jit_method_id	tripcounts_roi	flops_roi	cachesim_roi	data_transfer_roi	projection_roi
+         1	        -1	      4768	    0	      0	                                  _start	/home/dbulgakov/Study/hpc/src/build/src_omp	4768	38	0	2	0	0	0	0	0	0	0	0
+         2	        -1	      4804	    0	      0	                                  _start	/home/dbulgakov/Study/hpc/src/build/src_omp	4768	38	0	2	0	0	0	0	0	0	0	0
+         3	       340	    172682	    1	      1	[Loop at line 347 in __libc_start_main_impl]	/lib/x86_64-linux-gnu/libc.so.6	172651,172784	132,64	0	47	0	0	0	0	0	0	0	0
+         4	         3	    172489	    0	      1	                  __libc_start_call_main	/lib/x86_64-linux-gnu/libc.so.6	172368	164	0	49	0	0	0	0	0	0	0	0
+         5	         4	      5110	    0	      0	                                    main	/home/dbulgakov/Study/hpc/src/build/src_omp	5001	380	0	3	0	0	0	0	0	0	0	0
+         6	       520	      7625	    1	      0	         [Loop at line 45 in matrix_vec]	/home/dbulgakov/Study/hpc/src/build/src_omp	7587	100	7687	8	0	0	0	0	0	0	0	0
+         7	         6	      7471	    0	      0	                                 vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	7378	103	0	10	0	0	0	0	0	0	0	0
+         8	       522	     12369	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+         9	         4	      5136	    0	      0	                                    main	/home/dbulgakov/Study/hpc/src/build/src_omp	5001	380	0	3	0	0	0	0	0	0	0	0
+        10	       524	      9896	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+        11	        10	      8318	    0	      0	                          omp_matrix_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	8166	237	0	15	0	0	0	0	0	0	0	0
+        12	        11	    100721	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+        13	       346	    142878	    1	      1	          [Loop@0x22d40 in func@0x229f4]	/lib/x86_64-linux-gnu/libgomp.so.1	142656,144048,144080,144864,145016,145697	398,30,77,46,74,74	0	4	0	0	0	0	0	0	0	0
+        14	       524	      9943	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+        15	        14	      8504	    0	      0	                             omp_vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	8403	139	0	16	0	0	0	0	0	0	0	0
+        16	        15	    100721	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+        17	        16	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+        18	       349	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        19	       524	      9970	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+        20	        19	      8504	    0	      0	                             omp_vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	8403	139	0	16	0	0	0	0	0	0	0	0
+        21	        20	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+        22	       352	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        23	       524	     10183	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+        24	        23	      8504	    0	      0	                             omp_vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	8403	139	0	16	0	0	0	0	0	0	0	0
+        25	        24	    100721	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+        26	        25	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+        27	       355	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        28	       524	     10207	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+        29	        28	      8504	    0	      0	                             omp_vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	8403	139	0	16	0	0	0	0	0	0	0	0
+        30	        29	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+        31	       358	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        32	        15	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+        33	       361	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        34	        11	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+        35	       364	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        36	        20	    100721	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+        37	        36	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+        38	       367	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        39	       524	     10114	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+        40	        39	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+        41	       370	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        42	        29	    100721	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+        43	        42	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+        44	       373	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        45	       355	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        46	       358	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        47	       352	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        48	        39	    102966	    0	      1	                  GOMP_parallel_sections	/lib/x86_64-linux-gnu/libgomp.so.1	102832	160	0	41	0	0	0	0	0	0	0	0
+        49	        48	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+        50	       379	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        51	        12	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+        52	       382	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        53	        24	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+        54	       385	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        55	        11	    100726	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+        56	       531	     10832	    1	      0	[Loop at line 75 in omp_matrix_vec._omp_fn.0]	/home/dbulgakov/Study/hpc/src/build/src_omp	10787	88	10875	17	0	0	0	0	0	0	0	0
+        57	        56	      7471	    0	      0	                                 vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	7378	103	0	10	0	0	0	0	0	0	0	0
+        58	       533	     12343	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+        59	       367	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        60	       385	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        61	       379	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        62	       533	     12399	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+        63	        62	     15459	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+        64	        63	     17492	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+        65	       382	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        66	       361	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        67	       373	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        68	       533	     12317	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+        69	       379	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        70	       385	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        71	        62	     15478	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+        72	       349	    153295	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        73	        63	     17488	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+        74	       370	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        75	       373	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        76	       349	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        77	       367	    153289	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        78	       385	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        79	       367	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        80	       382	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        81	       355	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        82	       364	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        83	       361	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        84	       533	     12312	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+        85	        84	     15545	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+        86	       533	     12369	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+        87	        62	     15463	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+        88	       373	    153295	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        89	       533	     12357	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+        90	       349	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        91	       361	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        92	       358	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        93	       382	    153295	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        94	       533	     12380	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+        95	        94	     15498	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+        96	       379	    153289	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+        97	       358	    153769	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        98	       352	    153769	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+        99	        94	     15520	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       100	       364	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       101	       352	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       102	       370	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       103	        84	     15542	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+       104	       533	     12322	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       105	        62	     15481	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       106	        63	     17484	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+       107	       352	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       108	        62	     15474	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       109	       108	     17488	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+       110	       370	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       111	       361	    153769	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       112	       358	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       113	       373	    153289	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       114	       533	     12338	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       115	       364	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       116	        62	     15440	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       117	       533	     12402	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       118	       379	    153295	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       119	       533	     12368	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       120	       119	     15502	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       121	        94	     15525	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       122	       533	     12389	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       123	       367	    153295	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       124	        94	     15509	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       125	       119	     15509	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       126	         4	      5162	    0	      0	                                    main	/home/dbulgakov/Study/hpc/src/build/src_omp	5001	380	0	3	0	0	0	0	0	0	0	0
+       127	       546	      9970	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+       128	       127	      8504	    0	      0	                             omp_vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	8403	139	0	16	0	0	0	0	0	0	0	0
+       129	       128	    100721	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+       130	       129	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+       131	       426	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       132	       546	     10183	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+       133	       132	      8504	    0	      0	                             omp_vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	8403	139	0	16	0	0	0	0	0	0	0	0
+       134	       133	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+       135	       429	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       136	       546	      9943	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+       137	       136	      8504	    0	      0	                             omp_vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	8403	139	0	16	0	0	0	0	0	0	0	0
+       138	       137	    100721	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+       139	       138	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+       140	       432	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       141	       546	     10114	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+       142	       141	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+       143	       435	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       144	       546	     10207	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+       145	       144	      8504	    0	      0	                             omp_vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	8403	139	0	16	0	0	0	0	0	0	0	0
+       146	       145	    100721	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+       147	       146	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+       148	       438	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       149	       546	      9896	    1	      0	         [Loop at line 128 in omp_solve]	/home/dbulgakov/Study/hpc/src/build/src_omp	9856	584	10440	13	0	0	0	0	0	0	0	0
+       150	       149	      8318	    0	      0	                          omp_matrix_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	8166	237	0	15	0	0	0	0	0	0	0	0
+       151	       150	    100721	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+       152	       151	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+       153	       441	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       154	       128	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+       155	       444	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       156	       429	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       157	       137	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+       158	       448	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       159	       448	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       160	       444	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       161	       441	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       162	       133	    100721	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+       163	       162	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+       164	       454	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       165	       150	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+       166	       457	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       167	       141	    102966	    0	      1	                  GOMP_parallel_sections	/lib/x86_64-linux-gnu/libgomp.so.1	102832	160	0	41	0	0	0	0	0	0	0	0
+       168	       167	    144175	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+       169	       460	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       170	       145	    147920	    0	      1	                            func@0x241a4	/lib/x86_64-linux-gnu/libgomp.so.1	147876	432	0	37	0	0	0	0	0	0	0	0
+       171	       463	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       172	       454	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       173	       150	    100726	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	100656	141	0	1	0	0	0	0	0	0	0	0
+       174	       553	     10832	    1	      0	[Loop at line 75 in omp_matrix_vec._omp_fn.0]	/home/dbulgakov/Study/hpc/src/build/src_omp	10787	88	10875	17	0	0	0	0	0	0	0	0
+       175	       174	      7471	    0	      0	                                 vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	7378	103	0	10	0	0	0	0	0	0	0	0
+       176	       555	     12312	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       177	       176	     15545	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+       178	       463	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       179	       432	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       180	       457	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       181	       438	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       182	       460	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       183	       432	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       184	       555	     12333	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       185	       184	     15538	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+       186	       435	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       187	       463	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       188	       426	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       189	       555	     12399	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       190	       189	     15459	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       191	       190	     17492	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+       192	       438	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       193	       555	     12338	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       194	       454	    153295	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       195	       444	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       196	       448	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       197	       429	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       198	       555	     12369	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       199	       189	     15463	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       200	       457	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       201	       426	    153295	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       202	       426	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       203	       429	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       204	       555	     12317	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       205	       555	     12357	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       206	       189	     15474	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       207	       206	     17488	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+       208	       189	     15475	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       209	       429	    153769	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       210	       555	     12343	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       211	       441	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       212	       448	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       213	       189	     15478	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       214	       460	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       215	       555	     12380	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       216	       215	     15520	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       217	       190	     17488	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+       218	       176	     15526	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+       219	       435	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       220	       463	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       221	       555	     12402	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       222	       555	     12395	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       223	       460	    153295	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       224	       444	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       225	       432	    153289	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       226	       215	     15513	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       227	       441	    153295	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       228	       555	     12368	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       229	       228	     15513	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       230	       457	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       231	       189	     15484	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       232	       555	     12322	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       233	       454	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       234	       438	    153289	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       235	       432	    153295	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       236	       215	     15525	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       237	       460	    153289	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       238	       228	     15502	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       239	       435	    153769	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       240	       448	    153769	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       241	       189	     15427	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       242	       215	     15524	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       243	       435	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       244	        -1	    140864	    0	      1	                            func@0x225c4	/lib/x86_64-linux-gnu/libgomp.so.1	140740	128	0	43	0	0	0	0	0	0	0	0
+       245	        -1	   1219643	    0	      1	                                __clone3	/lib/x86_64-linux-gnu/libc.so.6	1219600	71	0	50	0	0	0	0	0	0	0	0
+       246	       342	    641683	    1	      1	      [Loop at line 447 in start_thread]	/lib/x86_64-linux-gnu/libc.so.6	641133,641596,641767	281,93,188	0	51	0	0	0	0	0	0	0	0
+       247	       246	   3705604	    0	      1	       tpss_thread_start_routine_wrapper	/home/dbulgakov/intel/oneapi/advisor/2025.0/lib64/libtpsstool.so	3704672	1788	0	42	0	0	0	0	0	0	0	0
+       248	       502	    141176	    1	      1	          [Loop@0x22770 in func@0x22644]	/lib/x86_64-linux-gnu/libgomp.so.1	141168	76	0	44	0	0	0	0	0	0	0	0
+       249	       505	    153286	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       250	       502	    141227	    1	      1	          [Loop@0x22770 in func@0x22644]	/lib/x86_64-linux-gnu/libgomp.so.1	141168	76	0	44	0	0	0	0	0	0	0	0
+       251	       509	    153766	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       252	       505	    153282	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       253	       509	    153762	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       254	       502	    141214	    1	      1	          [Loop@0x22770 in func@0x22644]	/lib/x86_64-linux-gnu/libgomp.so.1	141168	76	0	44	0	0	0	0	0	0	0	0
+       255	       569	     10832	    1	      0	[Loop at line 75 in omp_matrix_vec._omp_fn.0]	/home/dbulgakov/Study/hpc/src/build/src_omp	10787	88	10875	17	0	0	0	0	0	0	0	0
+       256	       255	      7471	    0	      0	                                 vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	7378	103	0	10	0	0	0	0	0	0	0	0
+       257	       571	     12343	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       258	       505	    153293	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       259	       571	     12369	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       260	       505	    153295	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       261	       571	     12317	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       262	       509	    153775	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       263	       571	     12399	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       264	       263	     15459	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       265	       264	     17492	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+       266	       571	     12333	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       267	       266	     15538	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+       268	       509	    153777	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       269	       571	     12380	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       270	       269	     15525	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       271	       571	     12312	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       272	       271	     15545	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+       273	       263	     15474	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       274	       273	     17488	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+       275	       263	     15463	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       276	       263	     15488	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       277	       571	     12322	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       278	       571	     12368	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       279	       278	     15502	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       280	       505	    153289	    1	      1	          [Loop@0x256c0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153280	17	0	34	0	0	0	0	0	0	0	0
+       281	       571	     12338	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       282	       263	     15444	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       283	       263	     15481	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       284	       263	     15427	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       285	       263	     15440	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       286	       509	    153769	    1	      1	          [Loop@0x258a0 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153760	19	0	38	0	0	0	0	0	0	0	0
+       287	       269	     15498	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       288	       263	     15478	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       289	       264	     17488	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+       290	       264	     17484	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+       291	       263	     15484	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       292	       269	     15509	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       293	       571	     12357	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       294	       571	     12389	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       295	       271	     15538	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+       296	       571	     12352	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       297	       571	     12308	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       298	       571	     12313	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       299	       263	     15489	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       300	       571	     12395	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       301	       266	     15545	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+       302	       264	     17481	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+       303	       271	     15546	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+       304	       571	     12402	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       305	       271	     15526	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+       306	       278	     15520	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       307	       269	     15524	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       308	       569	     10862	    1	      0	[Loop at line 75 in omp_matrix_vec._omp_fn.0]	/home/dbulgakov/Study/hpc/src/build/src_omp	10787	88	10875	17	0	0	0	0	0	0	0	0
+       309	       308	     11950	    0	      0	std::vector<double, std::allocator<double>>::operator[]	/home/dbulgakov/Study/hpc/src/build/src_omp	11930	36	0	23	0	0	0	0	0	0	0	0
+       310	       269	     15520	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       311	       269	     15495	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       312	       255	      7427	    0	      0	                                 vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	7378	103	0	10	0	0	0	0	0	0	0	0
+       313	       312	     12243	    0	      0	std::vector<double, std::allocator<double>>::end	/home/dbulgakov/Study/hpc/src/build/src_omp	12190	80	0	24	0	0	0	0	0	0	0	0
+       314	       313	     15417	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::__normal_iterator	/home/dbulgakov/Study/hpc/src/build/src_omp	15394	33	0	25	0	0	0	0	0	0	0	0
+       315	       590	     11328	    1	      0	[Loop at line 135 in omp_solve._omp_fn.0]	/home/dbulgakov/Study/hpc/src/build/src_omp	11207,11261	23,192	11230,11232,11230	26	0	0	0	0	0	0	0	0
+       316	       592	      7906	    1	      0	       [Loop at line 55 in vec_vec_comb]	/home/dbulgakov/Study/hpc/src/build/src_omp	7886	145	8031	28	0	0	0	0	0	0	0	0
+       317	       316	     12571	    0	      0	std::vector<double, std::allocator<double>>::operator[]	/home/dbulgakov/Study/hpc/src/build/src_omp	12548	36	0	30	0	0	0	0	0	0	0	0
+       318	       594	     11045	    1	      0	[Loop at line 86 in omp_vec_vec._omp_fn.0]	/home/dbulgakov/Study/hpc/src/build/src_omp	10998	90	11088	31	0	0	0	0	0	0	0	0
+       319	       264	     17476	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::base	/home/dbulgakov/Study/hpc/src/build/src_omp	17476	18	0	20	0	0	0	0	0	0	0	0
+       320	       255	      7412	    0	      0	                                 vec_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	7378	103	0	10	0	0	0	0	0	0	0	0
+       321	       320	     12145	    0	      0	std::vector<double, std::allocator<double>>::begin	/home/dbulgakov/Study/hpc/src/build/src_omp	12114	76	0	33	0	0	0	0	0	0	0	0
+       322	       569	     10841	    1	      0	[Loop at line 75 in omp_matrix_vec._omp_fn.0]	/home/dbulgakov/Study/hpc/src/build/src_omp	10787	88	10875	17	0	0	0	0	0	0	0	0
+       323	       571	     12376	    1	      0	[Loop at line 198 in std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>]	/home/dbulgakov/Study/hpc/src/build/src_omp	12301	103	12404	11	0	0	0	0	0	0	0	0
+       324	       266	     15526	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator*	/home/dbulgakov/Study/hpc/src/build/src_omp	15526	21	0	21	0	0	0	0	0	0	0	0
+       325	       269	     15513	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       326	       278	     15506	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       327	       278	     15525	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       328	       590	     11413	    1	      0	[Loop at line 135 in omp_solve._omp_fn.0]	/home/dbulgakov/Study/hpc/src/build/src_omp	11207,11261	23,192	11230,11232,11230	26	0	0	0	0	0	0	0	0
+       329	       599	      7985	    1	      0	       [Loop at line 55 in vec_vec_comb]	/home/dbulgakov/Study/hpc/src/build/src_omp	7886	145	8031	28	0	0	0	0	0	0	0	0
+       330	       329	     11953	    0	      0	std::vector<double, std::allocator<double>>::operator[]	/home/dbulgakov/Study/hpc/src/build/src_omp	11930	36	0	23	0	0	0	0	0	0	0	0
+       331	       263	     15467	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       332	       250	    154135	    0	      1	                            func@0x25a14	/lib/x86_64-linux-gnu/libgomp.so.1	154132	32	0	46	0	0	0	0	0	0	0	0
+       333	       263	     15436	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       334	       278	     15509	    0	      0	__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>::operator++	/home/dbulgakov/Study/hpc/src/build/src_omp	15490	36	0	22	0	0	0	0	0	0	0	0
+       335	       569	     10852	    1	      0	[Loop at line 75 in omp_matrix_vec._omp_fn.0]	/home/dbulgakov/Study/hpc/src/build/src_omp	10787	88	10875	17	0	0	0	0	0	0	0	0
+       336	       263	     15452	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       337	       569	     10828	    1	      0	[Loop at line 75 in omp_matrix_vec._omp_fn.0]	/home/dbulgakov/Study/hpc/src/build/src_omp	10787	88	10875	17	0	0	0	0	0	0	0	0
+       338	       263	     15435	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       339	       263	     15475	    0	      0	__gnu_cxx::operator!=<double const*, std::vector<double, std::allocator<double>>>	/home/dbulgakov/Study/hpc/src/build/src_omp	15427	63	0	19	0	0	0	0	0	0	0	0
+       340	         2	    172651	    0	      1	                  __libc_start_main_impl	/lib/x86_64-linux-gnu/libc.so.6	172544	334	0	48	0	0	0	0	0	0	0	0
+       341	         2	    172682	    0	      1	                  __libc_start_main_impl	/lib/x86_64-linux-gnu/libc.so.6	172544	334	0	48	0	0	0	0	0	0	0	0
+       342	       245	    641133	    0	      1	                            start_thread	/lib/x86_64-linux-gnu/libc.so.6	640784	1171	0	52	0	0	0	0	0	0	0	0
+       343	       245	    641683	    0	      1	                            start_thread	/lib/x86_64-linux-gnu/libc.so.6	640784	1171	0	52	0	0	0	0	0	0	0	0
+       344	        12	    142435	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+       345	       344	    142489	    1	      1	          [Loop@0x22c63 in func@0x229f4]	/lib/x86_64-linux-gnu/libgomp.so.1	142435,142656,143326,143408,144002,144048,144080,144184,144280,144784,144864,144912,144960,145016,145153,145462,145608,145697,145824,145887,145984,146220,146252,146897,146936,147223,147374,147539,147664	219,398,76,472,39,30,77,93,500,74,46,43,52,74,44,42,76,74,45,95,67,25,400,34,70,39,115,57,26	0	7	0	0	0	0	0	0	0	0
+       346	       345	    142656	    1	      1	          [Loop@0x22c99 in func@0x229f4]	/lib/x86_64-linux-gnu/libgomp.so.1	142489,142656,143326,143408,144002,144048,144080,144184,144280,144784,144864,144912,144960,145016,145153,145462,145608,145697,145824,145887,145984,146252,146897,146936,147223,147374,147539,147664	165,398,76,472,39,30,77,93,500,74,46,43,52,74,44,42,76,74,45,95,67,400,34,70,39,115,57,26	0	6	0	0	0	0	0	0	0	0
+       347	        12	    142878	    0	      1	                            func@0x229f4	/lib/x86_64-linux-gnu/libgomp.so.1	141812	6060	0	5	0	0	0	0	0	0	0	0
+       348	        17	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       349	       348	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       350	        17	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       351	        21	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       352	       351	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       353	        21	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       354	        26	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       355	       354	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       356	        26	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       357	        30	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       358	       357	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       359	        30	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       360	        32	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       361	       360	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       362	        32	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       363	        34	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       364	       363	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       365	        34	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       366	        37	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       367	       366	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       368	        37	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       369	        40	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       370	       369	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       371	        40	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       372	        43	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       373	       372	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       374	        43	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       375	        26	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       376	        30	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       377	        21	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       378	        49	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       379	       378	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       380	        49	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       381	        51	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       382	       381	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       383	        51	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       384	        53	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       385	       384	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       386	        53	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       387	        37	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       388	        53	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       389	        49	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       390	        51	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       391	        32	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       392	        43	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       393	        49	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       394	        53	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       395	        17	    153295	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       396	        40	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       397	        43	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       398	        17	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       399	        37	    153289	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       400	        53	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       401	        37	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       402	        51	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       403	        26	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       404	        34	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       405	        32	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       406	        43	    153295	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       407	        17	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       408	        32	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       409	        30	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       410	        51	    153295	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       411	        49	    153289	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       412	        30	    153769	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       413	        21	    153769	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       414	        34	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       415	        21	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       416	        40	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       417	        21	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       418	        40	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       419	        32	    153769	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       420	        30	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       421	        43	    153289	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       422	        34	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       423	        49	    153295	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       424	        37	    153295	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       425	       130	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       426	       425	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       427	       130	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       428	       134	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       429	       428	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       430	       134	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       431	       139	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       432	       431	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       433	       139	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       434	       142	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       435	       434	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       436	       142	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       437	       147	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       438	       437	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       439	       147	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       440	       152	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       441	       440	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       442	       152	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       443	       154	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       444	       443	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       445	       154	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       446	       134	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       447	       157	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       448	       447	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       449	       157	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       450	       157	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       451	       154	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       452	       152	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       453	       163	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       454	       453	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       455	       163	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       456	       165	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       457	       456	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       458	       165	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       459	       168	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       460	       459	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       461	       168	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       462	       170	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       463	       462	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       464	       170	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       465	       163	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       466	       170	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       467	       139	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       468	       165	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       469	       147	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       470	       168	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       471	       139	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       472	       142	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       473	       170	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       474	       130	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       475	       147	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       476	       163	    153295	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       477	       154	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       478	       157	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       479	       134	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       480	       165	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       481	       130	    153295	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       482	       130	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       483	       134	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       484	       134	    153769	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       485	       152	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       486	       157	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       487	       168	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       488	       142	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       489	       170	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       490	       168	    153295	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       491	       154	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       492	       139	    153289	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       493	       152	    153295	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       494	       165	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       495	       163	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       496	       147	    153289	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       497	       139	    153295	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       498	       168	    153289	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       499	       142	    153769	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       500	       157	    153769	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       501	       142	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       502	       247	    141168	    0	      1	                            func@0x22644	/lib/x86_64-linux-gnu/libgomp.so.1	140868	396	0	45	0	0	0	0	0	0	0	0
+       503	       247	    141176	    0	      1	                            func@0x22644	/lib/x86_64-linux-gnu/libgomp.so.1	140868	396	0	45	0	0	0	0	0	0	0	0
+       504	       248	    153248	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       505	       504	    153280	    1	      1	          [Loop@0x256a0 in func@0x25684]	/lib/x86_64-linux-gnu/libgomp.so.1	153248,153312,153376	55,60,9	0	36	0	0	0	0	0	0	0	0
+       506	       248	    153286	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       507	       247	    141227	    0	      1	                            func@0x22644	/lib/x86_64-linux-gnu/libgomp.so.1	140868	396	0	45	0	0	0	0	0	0	0	0
+       508	       250	    153696	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       509	       508	    153760	    1	      1	          [Loop@0x25860 in func@0x25824]	/lib/x86_64-linux-gnu/libgomp.so.1	153696,153760,153824,153928	36,39,97,12	0	40	0	0	0	0	0	0	0	0
+       510	       250	    153766	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       511	       248	    153282	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       512	       250	    153762	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       513	       247	    141214	    0	      1	                            func@0x22644	/lib/x86_64-linux-gnu/libgomp.so.1	140868	396	0	45	0	0	0	0	0	0	0	0
+       514	       248	    153293	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       515	       248	    153295	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       516	       250	    153775	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       517	       250	    153777	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       518	       248	    153289	    0	      1	                            func@0x25684	/lib/x86_64-linux-gnu/libgomp.so.1	153220	236	0	35	0	0	0	0	0	0	0	0
+       519	       250	    153769	    0	      1	                            func@0x25824	/lib/x86_64-linux-gnu/libgomp.so.1	153636	448	0	39	0	0	0	0	0	0	0	0
+       520	         5	      7587	    0	      0	                              matrix_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	7481	289	0	9	0	0	0	0	0	0	0	0
+       521	         5	      7625	    0	      0	                              matrix_vec	/home/dbulgakov/Study/hpc/src/build/src_omp	7481	289	0	9	0	0	0	0	0	0	0	0
+       522	         7	     12301	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       523	         7	     12369	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       524	         9	      9856	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       525	         9	      9896	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       526	         9	      9943	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       527	         9	      9970	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       528	         9	     10183	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       529	         9	     10207	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       530	         9	     10114	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       531	        55	     10787	    0	      0	                omp_matrix_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10699	198	0	18	0	0	0	0	0	0	0	0
+       532	        55	     10832	    0	      0	                omp_matrix_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10699	198	0	18	0	0	0	0	0	0	0	0
+       533	        57	     12301	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       534	        57	     12343	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       535	        57	     12399	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       536	        57	     12317	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       537	        57	     12312	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       538	        57	     12369	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       539	        57	     12357	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       540	        57	     12380	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       541	        57	     12322	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       542	        57	     12338	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       543	        57	     12402	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       544	        57	     12368	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       545	        57	     12389	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       546	       126	      9856	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       547	       126	      9970	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       548	       126	     10183	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       549	       126	      9943	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       550	       126	     10114	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       551	       126	     10207	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       552	       126	      9896	    0	      0	                               omp_solve	/home/dbulgakov/Study/hpc/src/build/src_omp	9663	1036	0	14	0	0	0	0	0	0	0	0
+       553	       173	     10787	    0	      0	                omp_matrix_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10699	198	0	18	0	0	0	0	0	0	0	0
+       554	       173	     10832	    0	      0	                omp_matrix_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10699	198	0	18	0	0	0	0	0	0	0	0
+       555	       175	     12301	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       556	       175	     12312	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       557	       175	     12333	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       558	       175	     12399	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       559	       175	     12338	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       560	       175	     12369	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       561	       175	     12317	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       562	       175	     12357	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       563	       175	     12343	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       564	       175	     12380	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       565	       175	     12402	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       566	       175	     12395	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       567	       175	     12368	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       568	       175	     12322	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       569	       254	     10787	    0	      0	                omp_matrix_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10699	198	0	18	0	0	0	0	0	0	0	0
+       570	       254	     10832	    0	      0	                omp_matrix_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10699	198	0	18	0	0	0	0	0	0	0	0
+       571	       256	     12301	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       572	       256	     12343	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       573	       256	     12369	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       574	       256	     12317	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       575	       256	     12399	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       576	       256	     12333	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       577	       256	     12380	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       578	       256	     12312	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       579	       256	     12322	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       580	       256	     12368	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       581	       256	     12338	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       582	       256	     12357	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       583	       256	     12389	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       584	       256	     12352	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       585	       256	     12308	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       586	       256	     12313	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       587	       256	     12395	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       588	       256	     12402	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       589	       254	     10862	    0	      0	                omp_matrix_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10699	198	0	18	0	0	0	0	0	0	0	0
+       590	       254	     11207	    0	      0	                     omp_solve._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	11157	303	0	27	0	0	0	0	0	0	0	0
+       591	       254	     11328	    0	      0	                     omp_solve._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	11157	303	0	27	0	0	0	0	0	0	0	0
+       592	       315	      7886	    0	      0	                            vec_vec_comb	/home/dbulgakov/Study/hpc/src/build/src_omp	7770	344	0	29	0	0	0	0	0	0	0	0
+       593	       315	      7906	    0	      0	                            vec_vec_comb	/home/dbulgakov/Study/hpc/src/build/src_omp	7770	344	0	29	0	0	0	0	0	0	0	0
+       594	       254	     10998	    0	      0	                   omp_vec_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10897	260	0	32	0	0	0	0	0	0	0	0
+       595	       254	     11045	    0	      0	                   omp_vec_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10897	260	0	32	0	0	0	0	0	0	0	0
+       596	       254	     10841	    0	      0	                omp_matrix_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10699	198	0	18	0	0	0	0	0	0	0	0
+       597	       256	     12376	    0	      0	std::inner_product<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double>>>, double>	/home/dbulgakov/Study/hpc/src/build/src_omp	12270	141	0	12	0	0	0	0	0	0	0	0
+       598	       254	     11413	    0	      0	                     omp_solve._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	11157	303	0	27	0	0	0	0	0	0	0	0
+       599	       328	      7886	    0	      0	                            vec_vec_comb	/home/dbulgakov/Study/hpc/src/build/src_omp	7770	344	0	29	0	0	0	0	0	0	0	0
+       600	       328	      7985	    0	      0	                            vec_vec_comb	/home/dbulgakov/Study/hpc/src/build/src_omp	7770	344	0	29	0	0	0	0	0	0	0	0
+       601	       254	     10852	    0	      0	                omp_matrix_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10699	198	0	18	0	0	0	0	0	0	0	0
+       602	       254	     10828	    0	      0	                omp_matrix_vec._omp_fn.0	/home/dbulgakov/Study/hpc/src/build/src_omp	10699	198	0	18	0	0	0	0	0	0	0	0
+       603	        -1	         0	    0	      0	                [Unknown stack frame(s)]	n/a	0	0	0	54	0	0	0	0	0	0	0	0
